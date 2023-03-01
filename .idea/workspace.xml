@@ -96,7 +96,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677702502710</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add delete operation to Movie resource controller.&#10;&#10;- Update MovieResource controller to support delete operation.&#10;- Update MovieDAO to add deleteById().">
+      <created>1677703721422</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1677703721422</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -104,6 +111,7 @@
     <MESSAGE value="Add database support and fist Movie entity.&#10;&#10;- Add dependencies for hibernate and h2 database.&#10;- Add database parameter to config.yml.&#10;- Add Movie entity with first attributes.&#10;- Update Configuration and Application class to support hibernate and database parameters." />
     <MESSAGE value="Add Movies resource controller to create and query movies.&#10;&#10;- Add DAO class for movies.&#10;- Add resource controller to create and query movies.&#10;- Update Application class to enable resource controller for movies.&#10;- Update Movie class to add sql query string and add parameter validation.&#10;- Update readme to add cli commands for adding and querying movies." />
     <MESSAGE value="Add Movie resource controller to query a single movie.&#10;&#10;- Add resource controller to query a single movie.&#10;- Update Application class to enable resource controller for single movie queries." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Movie resource controller to query a single movie.&#10;&#10;- Add resource controller to query a single movie.&#10;- Update Application class to enable resource controller for single movie queries." />
+    <MESSAGE value="Add delete operation to Movie resource controller.&#10;&#10;- Update MovieResource controller to support delete operation.&#10;- Update MovieDAO to add deleteById()." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add delete operation to Movie resource controller.&#10;&#10;- Update MovieResource controller to support delete operation.&#10;- Update MovieDAO to add deleteById()." />
   </component>
 </project>

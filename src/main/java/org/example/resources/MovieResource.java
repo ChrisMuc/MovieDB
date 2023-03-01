@@ -8,6 +8,7 @@ import org.example.db.MovieDAO;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 
 @Path("/movie/{movieId}")
 @Produces(MediaType.APPLICATION_JSON)
@@ -27,7 +28,7 @@ public class MovieResource {
 
     @DELETE
     @UnitOfWork
-    public Boolean deleteMovie(@PathParam("movieId") LongParam id) {
-        return movieDAO.deleteById(id.get());
+    public Response deleteMovie(@PathParam("movieId") LongParam id) {
+        return Response.status(movieDAO.deleteById(id.get())? Response.Status.OK : Response.Status.NOT_FOUND).build();
     }
 }
