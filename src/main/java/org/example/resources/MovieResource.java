@@ -19,10 +19,15 @@ public class MovieResource {
     }
 
     @GET
-    @Timed
+    @Timed   // used to record the duration and rate of invocations as a Metrics Timer.
     @UnitOfWork
     public Movie findMovie(@PathParam("movieId") LongParam id) {
         return movieDAO.findById(id.get());
     }
 
+    @DELETE
+    @UnitOfWork
+    public Boolean deleteMovie(@PathParam("movieId") LongParam id) {
+        return movieDAO.deleteById(id.get());
+    }
 }

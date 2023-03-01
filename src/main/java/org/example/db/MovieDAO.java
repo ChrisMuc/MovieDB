@@ -2,6 +2,7 @@ package org.example.db;
 
 import io.dropwizard.hibernate.AbstractDAO;
 import org.example.core.Movie;
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
 import java.util.List;
@@ -13,6 +14,16 @@ public class MovieDAO extends AbstractDAO<Movie> {
 
     public Movie findById(Long id) {
         return get(id);
+    }
+
+    public boolean deleteById(Long id) {
+        Session session = currentSession();
+        Object object = session.load(Movie.class, id);
+        if (object != null) {
+            session.delete(object);
+            return true;
+        }
+        return false;
     }
 
     public long create(Movie Movie) {
