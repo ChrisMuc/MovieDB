@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cace42f1-dc8a-4346-89f0-d3ede97d99cd" name="Changes" comment="Add database support and fist Movie entity.&#10;&#10;- Add dependencies for hibernate and h2 database.&#10;- Add database parameter to config.yml.&#10;- Add Movie entity with first attributes.&#10;- Update Configuration and Application class to support hibernate and database parameters.">
-      <change afterPath="$PROJECT_DIR$/dependency-reduced-pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/core/Movie.java" afterDir="false" />
+    <list default="true" id="cace42f1-dc8a-4346-89f0-d3ede97d99cd" name="Changes" comment="Add Movies resource controller to create and query movies.&#10;&#10;- Add DAO class for movies.&#10;- Add resource controller to create and query movies.&#10;- Update Application class to enable resource controller for movies.&#10;- Update Movie class to add sql query string and add parameter validation.&#10;- Update readme to add cli commands for adding and querying movies.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/db/MovieDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/resources/MoviesResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/MovieDBApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/MovieDBApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/MovieDBConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/MovieDBConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/core/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/core/Movie.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +77,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677697228095</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add database support and fist Movie entity.&#10;&#10;- Add dependencies for hibernate and h2 database.&#10;- Add database parameter to config.yml.&#10;- Add Movie entity with first attributes.&#10;- Update Configuration and Application class to support hibernate and database parameters.">
+      <created>1677698888254</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1677698888254</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

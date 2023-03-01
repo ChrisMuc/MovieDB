@@ -3,19 +3,26 @@ package org.example.core;
 import javax.persistence.*;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
+import javax.validation.constraints.NotEmpty;
 import java.util.Objects;
 
 @Entity
 @Table(name = "movies")
+@NamedQuery(
+        query = "SELECT m FROM Movie m",
+        name = "org.example.core.Movie.findAll"
+)
 public class Movie {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @Column(name = "name", nullable = false)
+    @NotEmpty
     private String name;
 
     @Column(name = "description", nullable = false)
+    @NotEmpty
     private String description;
 
     @Column(name = "publicationYear", nullable = true)

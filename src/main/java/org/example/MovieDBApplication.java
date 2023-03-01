@@ -6,6 +6,8 @@ import io.dropwizard.hibernate.HibernateBundle;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 import org.example.core.Movie;
+import org.example.db.MovieDAO;
+import org.example.resources.MoviesResource;
 
 public class MovieDBApplication extends Application<MovieDBConfiguration> {
 
@@ -33,6 +35,9 @@ public class MovieDBApplication extends Application<MovieDBConfiguration> {
 
     @Override
     public void run(final MovieDBConfiguration configuration, final Environment environment) {
+        final MovieDAO movieDAO = new MovieDAO(hibernate.getSessionFactory());
+
+        environment.jersey().register(new MoviesResource(movieDAO));
     }
 
 }
