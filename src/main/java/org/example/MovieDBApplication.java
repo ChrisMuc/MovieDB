@@ -1,14 +1,25 @@
 package org.example;
 
 import io.dropwizard.Application;
+import io.dropwizard.db.DataSourceFactory;
+import io.dropwizard.hibernate.HibernateBundle;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
+import org.example.core.Movie;
 
 public class MovieDBApplication extends Application<MovieDBConfiguration> {
 
     public static void main(final String[] args) throws Exception {
         new MovieDBApplication().run(args);
     }
+
+
+    private final HibernateBundle<MovieDBConfiguration> hibernate = new HibernateBundle<MovieDBConfiguration>(Movie.class) {
+        @Override
+        public DataSourceFactory getDataSourceFactory(MovieDBConfiguration configuration) {
+            return configuration.getDataSourceFactory();
+        }
+    };
 
     @Override
     public String getName() {
@@ -17,13 +28,11 @@ public class MovieDBApplication extends Application<MovieDBConfiguration> {
 
     @Override
     public void initialize(final Bootstrap<MovieDBConfiguration> bootstrap) {
-        // TODO: application initialization
+        bootstrap.addBundle(hibernate);
     }
 
     @Override
-    public void run(final MovieDBConfiguration configuration,
-                    final Environment environment) {
-        // TODO: implement application
+    public void run(final MovieDBConfiguration configuration, final Environment environment) {
     }
 
 }
