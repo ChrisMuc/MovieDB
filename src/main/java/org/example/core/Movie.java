@@ -71,7 +71,7 @@ public class Movie {
         return publicationYear;
     }
 
-    public void setYearBorn(Integer publicationYear) {
+    public void setPublicationYear(Integer publicationYear) {
         this.publicationYear = publicationYear;
     }
 
