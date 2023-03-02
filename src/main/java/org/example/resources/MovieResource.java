@@ -26,6 +26,12 @@ public class MovieResource {
         return movieDAO.findById(id.get());
     }
 
+    @PUT
+    @UnitOfWork
+    public Movie update(@PathParam("movieId") LongParam id, Movie movie) {
+        return movieDAO.update(id.get(), movie);
+    }
+
     @DELETE
     @UnitOfWork
     public Response deleteMovie(@PathParam("movieId") LongParam id) {

@@ -28,6 +28,11 @@ public class MovieDAO extends AbstractDAO<Movie> {
         return persist(Movie).getId();
     }
 
+    public Movie update(Long id, Movie movie) {
+        movie.setId(id);
+        return persist(movie);
+    }
+
     public List<Movie> findAll() {
         return list(namedTypedQuery("org.example.core.Movie.findAll"));
     }
