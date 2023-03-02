@@ -12,6 +12,11 @@ Health Check
 
 To see your applications health enter url `http://localhost:8081/healthcheck`
 
+
+OpenAPI Specification
+---
+To see the OpenAPI endpoint specification, open url: `http://localhost:8080/openapi.json`
+
 Commands to add and query movies
 ---
 ```

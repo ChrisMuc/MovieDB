@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cace42f1-dc8a-4346-89f0-d3ede97d99cd" name="Changes" comment="Add delete operation to Movie resource controller.&#10;&#10;- Update MovieResource controller to support delete operation.&#10;- Update MovieDAO to add deleteById().">
+    <list default="true" id="cace42f1-dc8a-4346-89f0-d3ede97d99cd" name="Changes" comment="Add OpenAPI spec integration.&#10;&#10;- Add dependencies for Swagger/OpenAPI.&#10;- Update Application class to load and register OpenAPI resource.">
       <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/core/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/core/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/db/MovieDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/db/MovieDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/MovieDBApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/MovieDBApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/resources/MoviesResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/resources/MoviesResource.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -118,7 +119,21 @@
       <option name="project" value="LOCAL" />
       <updated>1677738474790</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Add filter by year of publication feature.&#10;&#10;- Update MoviesResource controller to support optional publicationYear parameter.&#10;- Update MovieDAO to add findByPublicationYear().&#10;- Update Movie class to add query string for filtering by publicationYear.">
+      <created>1677757722485</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1677757722485</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Fix typo in Movie class.&#10;&#10;- Update Movie class to fix copy-paste-typo in name of setter.">
+      <created>1677777168490</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1677777168490</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -129,6 +144,8 @@
     <MESSAGE value="Add delete operation to Movie resource controller.&#10;&#10;- Update MovieResource controller to support delete operation.&#10;- Update MovieDAO to add deleteById()." />
     <MESSAGE value="Fix bug when deleting non-existing movie and improve response.&#10;&#10;- Update MovieDAO to fix bug when deleting a non-existing dataset.&#10;- Update MovieResource controller to return status code instead of boolean." />
     <MESSAGE value="Add update operation to Movie resource controller.&#10;&#10;- Update MovieResource controller to support update operation.&#10;- Update MovieDAO to add update()." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add update operation to Movie resource controller.&#10;&#10;- Update MovieResource controller to support update operation.&#10;- Update MovieDAO to add update()." />
+    <MESSAGE value="Add filter by year of publication feature.&#10;&#10;- Update MoviesResource controller to support optional publicationYear parameter.&#10;- Update MovieDAO to add findByPublicationYear().&#10;- Update Movie class to add query string for filtering by publicationYear." />
+    <MESSAGE value="Fix typo in Movie class.&#10;&#10;- Update Movie class to fix copy-paste-typo in name of setter." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix typo in Movie class.&#10;&#10;- Update Movie class to fix copy-paste-typo in name of setter." />
   </component>
 </project>
