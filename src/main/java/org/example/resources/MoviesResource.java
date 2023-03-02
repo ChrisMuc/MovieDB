@@ -5,12 +5,10 @@ import org.example.core.Movie;
 import org.example.db.MovieDAO;
 
 import javax.validation.Valid;
-import javax.ws.rs.GET;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.util.List;
+import java.util.Optional;
 
 @Path("/movies")
 @Produces(MediaType.APPLICATION_JSON)
@@ -29,8 +27,12 @@ public class MoviesResource {
 
     @GET
     @UnitOfWork
-    public List<Movie> listMovies() {
-        return movieDAO.findAll();
+    public List<Movie> listMovies(@QueryParam("publicationYear") Optional<Integer> publicationYear) {
+        if (publicationYear.isPresent()) {
+            return movieDAO.findByPublicationYear(publicationYear.get());
+        } else {
+            return movieDAO.findAll();
+        }
     }
 
 }

@@ -7,8 +7,9 @@
     <list default="true" id="cace42f1-dc8a-4346-89f0-d3ede97d99cd" name="Changes" comment="Add delete operation to Movie resource controller.&#10;&#10;- Update MovieResource controller to support delete operation.&#10;- Update MovieDAO to add deleteById().">
       <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/core/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/core/Movie.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/db/MovieDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/db/MovieDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/resources/MovieResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/resources/MovieResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/resources/MoviesResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/resources/MoviesResource.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677707807658</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Add update operation to Movie resource controller.&#10;&#10;- Update MovieResource controller to support update operation.&#10;- Update MovieDAO to add update().">
+      <created>1677738474790</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1677738474790</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -120,6 +128,7 @@
     <MESSAGE value="Add Movie resource controller to query a single movie.&#10;&#10;- Add resource controller to query a single movie.&#10;- Update Application class to enable resource controller for single movie queries." />
     <MESSAGE value="Add delete operation to Movie resource controller.&#10;&#10;- Update MovieResource controller to support delete operation.&#10;- Update MovieDAO to add deleteById()." />
     <MESSAGE value="Fix bug when deleting non-existing movie and improve response.&#10;&#10;- Update MovieDAO to fix bug when deleting a non-existing dataset.&#10;- Update MovieResource controller to return status code instead of boolean." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix bug when deleting non-existing movie and improve response.&#10;&#10;- Update MovieDAO to fix bug when deleting a non-existing dataset.&#10;- Update MovieResource controller to return status code instead of boolean." />
+    <MESSAGE value="Add update operation to Movie resource controller.&#10;&#10;- Update MovieResource controller to support update operation.&#10;- Update MovieDAO to add update()." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add update operation to Movie resource controller.&#10;&#10;- Update MovieResource controller to support update operation.&#10;- Update MovieDAO to add update()." />
   </component>
 </project>

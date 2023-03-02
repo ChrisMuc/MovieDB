@@ -12,6 +12,10 @@ import java.util.Objects;
         query = "SELECT m FROM Movie m",
         name = "org.example.core.Movie.findAll"
 )
+@NamedQuery(
+        query = "SELECT m FROM Movie m WHERE m.publicationYear=:publicationYear",
+        name = "org.example.core.Movie.findByPublicationYear"
+)
 public class Movie {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

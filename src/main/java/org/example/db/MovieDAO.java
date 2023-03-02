@@ -36,4 +36,10 @@ public class MovieDAO extends AbstractDAO<Movie> {
     public List<Movie> findAll() {
         return list(namedTypedQuery("org.example.core.Movie.findAll"));
     }
+
+    public List<Movie> findByPublicationYear(Integer publicationYear) {
+        return list(namedTypedQuery("org.example.core.Movie.findByPublicationYear")
+                .setParameter("publicationYear", publicationYear)
+        );
+    }
 }
