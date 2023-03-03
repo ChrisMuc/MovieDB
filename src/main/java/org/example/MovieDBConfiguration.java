@@ -22,4 +22,17 @@ public class MovieDBConfiguration extends Configuration {
     public void setDataSourceFactory(DataSourceFactory dataSourceFactory) {
         this.database = dataSourceFactory;
     }
+
+    @NotNull
+    private Boolean enableOpenApiSpec;
+
+    @JsonProperty
+    public Boolean getEnableOpenApiSpec() {
+        return enableOpenApiSpec;
+    }
+
+    @JsonProperty
+    public void setEnableOpenApiSpec(Boolean enableOpenApiSpec) {
+        this.enableOpenApiSpec = enableOpenApiSpec;
+    }
 }

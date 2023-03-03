@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cace42f1-dc8a-4346-89f0-d3ede97d99cd" name="Changes" comment="Fix warnings.&#10;&#10;- Update Movie resource controller to use Optional instead of deprecated LongParam.&#10;- Update MovieDAO to fix auto-closeable warning.">
+    <list default="true" id="cace42f1-dc8a-4346-89f0-d3ede97d99cd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/MovieDBApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/MovieDBApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/MovieDBConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/MovieDBConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/core/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/core/Movie.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/db/MovieDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/db/MovieDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/resources/MovieResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/resources/MovieResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/resources/MoviesResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/resources/MoviesResource.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +165,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677809669701</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Fix warnings.&#10;&#10;- Update Movie resource controller to use Optional instead of deprecated LongParam.&#10;- Update MovieDAO to fix auto-closeable warning.">
+      <created>1677810598597</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1677810598597</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

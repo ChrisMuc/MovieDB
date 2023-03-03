@@ -49,22 +49,24 @@ public class MovieDBApplication extends Application<MovieDBConfiguration> {
         environment.jersey().register(new MovieResource(movieDAO));
         environment.jersey().register(new MoviesResource(movieDAO));
 
-        OpenAPI oas = new OpenAPI();
-        Info info = new Info()
-                .title("MovieDB API")
-                .version("1.0.0")
-                .description("RESTful greetings for you.")
-                .termsOfService("http://example.org/terms")
-                .contact(new Contact().email("christian.hass.muc@gmail.com"));
+        if (configuration.getEnableOpenApiSpec()) {
+            OpenAPI oas = new OpenAPI();
+            Info info = new Info()
+                    .title("MovieDB API")
+                    .version("1.0.0")
+                    .description("RESTful greetings for you.")
+                    .termsOfService("http://example.org/terms")
+                    .contact(new Contact().email("christian.hass.muc@gmail.com"));
 
-        oas.info(info);
-        SwaggerConfiguration oasConfig = new SwaggerConfiguration()
-                .openAPI(oas)
-                .prettyPrint(true)
-                .resourcePackages(Stream.of("org.example")
-                        .collect(Collectors.toSet()));
-        environment.jersey().register(new OpenApiResource()
-                .openApiConfiguration(oasConfig));
+            oas.info(info);
+            SwaggerConfiguration oasConfig = new SwaggerConfiguration()
+                    .openAPI(oas)
+                    .prettyPrint(true)
+                    .resourcePackages(Stream.of("org.example")
+                            .collect(Collectors.toSet()));
+            environment.jersey().register(new OpenApiResource()
+                    .openApiConfiguration(oasConfig));
+        }
     }
 
 }
