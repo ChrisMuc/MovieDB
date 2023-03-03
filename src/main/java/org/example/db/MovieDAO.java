@@ -2,7 +2,6 @@ package org.example.db;
 
 import io.dropwizard.hibernate.AbstractDAO;
 import org.example.core.Movie;
-import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
 import java.util.List;
@@ -35,9 +34,15 @@ public class MovieDAO extends AbstractDAO<Movie> {
         return persist(Movie).getId();
     }
 
-    public Movie update(Long id, Movie movie) {
+    public Optional<Movie> update(Long id, Movie movie) {
+        Movie current = get(id);
+        if (current == null) {
+            return Optional.empty();
+        } else {
+            currentSession().evict(current);
+        }
         movie.setId(id);
-        return persist(movie);
+        return Optional.of((Movie) currentSession().merge(movie));
     }
 
     public List<Movie> findAll() {

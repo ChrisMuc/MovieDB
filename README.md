@@ -29,3 +29,9 @@ curl -H "Content-Type: application/json" -d '{"name":"The Test", "description" :
 curl -H "Content-Type: application/json" -d '{"name":"Missing Description" }' http://localhost:8080/movies
 
 ```
+
+
+Important Notes
+---
+- Update overwrites all attributes. Attributes which are not set, will be set to null!
+  If null violates a validation rule, a Status Code of 400 (bad request) is returned

@@ -34,7 +34,7 @@ public class MovieResource {
         return movieDAO.update(
                 id.orElseThrow(() -> new BadRequestException("movie ID is required")),
                 movie
-        );
+        ).orElseThrow(() -> new NotFoundException("No such movie."));
     }
 
     @DELETE
