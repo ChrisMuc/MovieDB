@@ -11,9 +11,13 @@ import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Contact;
 import io.swagger.v3.oas.models.info.Info;
 import org.example.core.Movie;
+import org.example.core.Person;
 import org.example.db.MovieDAO;
+import org.example.db.PersonDAO;
 import org.example.resources.MovieResource;
 import org.example.resources.MoviesResource;
+import org.example.resources.PeopleResource;
+import org.example.resources.PersonResource;
 
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -25,7 +29,7 @@ public class MovieDBApplication extends Application<MovieDBConfiguration> {
     }
 
 
-    private final HibernateBundle<MovieDBConfiguration> hibernate = new HibernateBundle<MovieDBConfiguration>(Movie.class) {
+    private final HibernateBundle<MovieDBConfiguration> hibernate = new HibernateBundle<MovieDBConfiguration>(Person.class, Movie.class) {
         @Override
         public DataSourceFactory getDataSourceFactory(MovieDBConfiguration configuration) {
             return configuration.getDataSourceFactory();
@@ -44,8 +48,11 @@ public class MovieDBApplication extends Application<MovieDBConfiguration> {
 
     @Override
     public void run(final MovieDBConfiguration configuration, final Environment environment) {
+        final PersonDAO personDAO = new PersonDAO(hibernate.getSessionFactory());
         final MovieDAO movieDAO = new MovieDAO(hibernate.getSessionFactory());
 
+        environment.jersey().register(new PersonResource(personDAO));
+        environment.jersey().register(new PeopleResource(personDAO));
         environment.jersey().register(new MovieResource(movieDAO));
         environment.jersey().register(new MoviesResource(movieDAO));
 
