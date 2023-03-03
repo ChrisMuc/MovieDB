@@ -30,8 +30,8 @@ public class MovieDAO extends AbstractDAO<Movie> {
         return false;
     }
 
-    public long create(Movie Movie) {
-        return persist(Movie).getId();
+    public long create(Movie movie) {
+        return persist(movie).getId();
     }
 
     public Optional<Movie> update(Long id, Movie movie) {
