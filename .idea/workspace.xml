@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cace42f1-dc8a-4346-89f0-d3ede97d99cd" name="Changes" comment="Add first code for testing Movie resource controller.&#10;&#10;- Add dependencies for testing.&#10;- Add test for Movie resource (GET).&#10;- Update MovieDAO to return Optional.&#10;- Update Movie resource controller to throw NotFoundException.">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/resources/MovieResourceTest.java" afterDir="false" />
+    <list default="true" id="cace42f1-dc8a-4346-89f0-d3ede97d99cd" name="Changes" comment="Fix warnings.&#10;&#10;- Update Movie resource controller to use Optional instead of deprecated LongParam.&#10;- Update MovieDAO to fix auto-closeable warning.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dependency-reduced-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dependency-reduced-pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/db/MovieDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/db/MovieDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/resources/MovieResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/resources/MovieResource.java" afterDir="false" />
     </list>
@@ -157,7 +154,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677777168490</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Add first code for testing Movie resource controller.&#10;&#10;- Add dependencies for testing.&#10;- Add test for Movie resource (GET).&#10;- Update MovieDAO to return Optional.&#10;- Update Movie resource controller to throw NotFoundException.">
+      <created>1677809669701</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1677809669701</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -170,6 +174,8 @@
     <MESSAGE value="Add update operation to Movie resource controller.&#10;&#10;- Update MovieResource controller to support update operation.&#10;- Update MovieDAO to add update()." />
     <MESSAGE value="Add filter by year of publication feature.&#10;&#10;- Update MoviesResource controller to support optional publicationYear parameter.&#10;- Update MovieDAO to add findByPublicationYear().&#10;- Update Movie class to add query string for filtering by publicationYear." />
     <MESSAGE value="Fix typo in Movie class.&#10;&#10;- Update Movie class to fix copy-paste-typo in name of setter." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix typo in Movie class.&#10;&#10;- Update Movie class to fix copy-paste-typo in name of setter." />
+    <MESSAGE value="Add first code for testing Movie resource controller.&#10;&#10;- Add dependencies for testing.&#10;- Add test for Movie resource (GET).&#10;- Update MovieDAO to return Optional.&#10;- Update Movie resource controller to throw NotFoundException." />
+    <MESSAGE value="Fix warnings.&#10;&#10;- Update Movie resource controller to use Optional instead of deprecated LongParam.&#10;- Update MovieDAO to fix auto-closeable warning." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix warnings.&#10;&#10;- Update Movie resource controller to use Optional instead of deprecated LongParam.&#10;- Update MovieDAO to fix auto-closeable warning." />
   </component>
 </project>
