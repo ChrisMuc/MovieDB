@@ -20,9 +20,12 @@ public class MovieDAO extends AbstractDAO<Movie> {
     public boolean deleteById(Long id) {
         Object object = get(id);
         if (object != null) {
-            try (Session session = currentSession()) {
-                session.delete(object);
-            }
+//            try (Session session = currentSession()) {
+//                session.delete(object);
+//                session.flush(); // if session is not flushed, auto-close will revert
+//            }
+            //noinspection resource
+            currentSession().delete(object); // Do not use auto-close, otherwise delete will be reverted (and other side effects could arise)!
             return true;
         }
         return false;
