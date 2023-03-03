@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cace42f1-dc8a-4346-89f0-d3ede97d99cd" name="Changes" comment="Add OpenAPI spec integration.&#10;&#10;- Add dependencies for Swagger/OpenAPI.&#10;- Update Application class to load and register OpenAPI resource.">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="cace42f1-dc8a-4346-89f0-d3ede97d99cd" name="Changes" comment="Add first code for testing Movie resource controller.&#10;&#10;- Add dependencies for testing.&#10;- Add test for Movie resource (GET).&#10;- Update MovieDAO to return Optional.&#10;- Update Movie resource controller to throw NotFoundException.">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/resources/MovieResourceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dependency-reduced-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dependency-reduced-pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/MovieDBApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/MovieDBApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/resources/MoviesResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/resources/MoviesResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/db/MovieDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/db/MovieDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/resources/MovieResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/resources/MovieResource.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,14 +43,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager">
+}</component>
+  <component name="RunManager" selected="JAR Application.Build and run server">
+    <configuration name="MovieResourceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MovieDB" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.resources.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.resources" />
+      <option name="MAIN_CLASS_NAME" value="org.example.resources.MovieResourceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Build and run server" type="JarApplication">
       <option name="JAR_PATH" value="./target/MovieDB-1.0-SNAPSHOT.jar" />
       <option name="PROGRAM_PARAMETERS" value="server config.yml" />
@@ -60,6 +75,15 @@
         <option name="Maven.BeforeRunTask" enabled="true" file="$PROJECT_DIR$/pom.xml" goal="package" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JAR Application.Build and run server" />
+      <item itemvalue="JUnit.MovieResourceTest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.MovieResourceTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

@@ -5,14 +5,15 @@ import org.example.core.Movie;
 import org.hibernate.SessionFactory;
 
 import java.util.List;
+import java.util.Optional;
 
 public class MovieDAO extends AbstractDAO<Movie> {
     public MovieDAO(SessionFactory factory) {
         super(factory);
     }
 
-    public Movie findById(Long id) {
-        return get(id);
+    public Optional<Movie> findById(Long id) {
+        return Optional.ofNullable(get(id));
     }
 
     public boolean deleteById(Long id) {

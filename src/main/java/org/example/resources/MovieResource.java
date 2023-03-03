@@ -23,7 +23,7 @@ public class MovieResource {
     @Timed   // used to record the duration and rate of invocations as a Metrics Timer.
     @UnitOfWork
     public Movie findMovie(@PathParam("movieId") LongParam id) {
-        return movieDAO.findById(id.get());
+        return movieDAO.findById(id.get()).orElseThrow(() -> new NotFoundException("No such movie."));
     }
 
     @PUT
