@@ -20,13 +20,23 @@ To see the OpenAPI endpoint specification, open url: `http://localhost:8080/open
 Commands to add and query movies
 ---
 ```
+# Query movies and people
+curl http://localhost:8080/people
+curl http://localhost:8080/person/1
 curl http://localhost:8080/movies
-# OK
+curl http://localhost:8080/movie/1
+
+# Inserts: OK
+curl -H "Content-Type: application/json" -d '{"name":"Keanu Reeves" }' http://localhost:8080/people
 curl -H "Content-Type: application/json" -d '{"name":"The Matrix", "publicationYear" : 1999, "description" : "The Matrix is a 1999 science fiction action film written and directed by the Wachowskis. It depicts a dystopian future in which humanity is unknowingly trapped inside the Matrix, a simulated reality that intelligent machines have created to distract humans while using their bodies as an energy source." }' http://localhost:8080/movies
 curl -H "Content-Type: application/json" -d '{"name":"The Test", "description" : "test" }' http://localhost:8080/movies
 
-# Failing
+# Inserts: Failing
 curl -H "Content-Type: application/json" -d '{"name":"Missing Description" }' http://localhost:8080/movies
+
+# Search
+curl http://localhost:8080/people?name=Reeves
+curl http://localhost:8080/movies?publicationYear=1999
 
 ```
 

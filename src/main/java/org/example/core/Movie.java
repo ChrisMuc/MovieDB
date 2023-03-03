@@ -25,7 +25,7 @@ public class Movie {
     @NotEmpty
     private String name;
 
-    @Column(name = "description", nullable = false)
+    @Column(name = "description", nullable = false, length = 32768)
     @NotEmpty
     private String description;
 
